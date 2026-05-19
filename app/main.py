@@ -35,8 +35,8 @@ def create_app() -> FastAPI:
     app.include_router(demo_routes.router)
     app.include_router(admin_routes.router)
 
-    @app.get("/healthz")
-    def healthz() -> dict:
+    @app.get("/health")
+    def health() -> dict:
         return {"ok": True}
 
     return app

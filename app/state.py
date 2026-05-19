@@ -67,9 +67,9 @@ class _FileBackend:
 
 
 class _GcsBackend:
-    def __init__(self, bucket_name: str) -> None:
+    def __init__(self, bucket_name: str, project: str) -> None:
         from google.cloud import storage  # imported lazily so tests don't need GCS
-        self._client = storage.Client()
+        self._client = storage.Client(project=project)
         self._bucket = self._client.bucket(bucket_name)
 
     def read_all(self) -> Dict[str, dict]:
@@ -97,7 +97,7 @@ def _get_backend():
     if _backend is None:
         cfg = get_app_config()
         if cfg.state_bucket:
-            _backend = _GcsBackend(cfg.state_bucket)
+            _backend = _GcsBackend(cfg.state_bucket, cfg.gcp_project_id)
             logger.info("state backend: GCS bucket %s", cfg.state_bucket)
         else:
             _backend = _FileBackend(cfg.state_file_path)
