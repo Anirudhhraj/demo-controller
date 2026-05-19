@@ -1,0 +1,16 @@
+demos:
+  cs5:
+    name: "Comparative Streamlit Analysis"
+    instance: cs5-prod-vm-v2
+    zone: us-east1-d
+    healthUrl: http://34.26.144.212:8501/_stcore/health
+    appUrl: http://34.26.144.212:8501/comparative/
+    idleMinutes: 10
+
+  vicinity:
+    name: "Vicinity"
+    instance: vicinity-prod-vm
+    zone: us-east1-c
+    healthUrl: http://34.74.93.251/
+    appUrl: http://34.74.93.251/
+    idleMinutes: 10
