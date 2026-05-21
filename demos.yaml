@@ -4,7 +4,7 @@ demos:
     instance: cs5-prod-vm-v2
     zone: us-east1-d
     healthUrl: http://34.26.144.212:8501/_stcore/health
-    appUrl: http://34.26.144.212:8501/
+    appUrl: https://cs5-proxy-tffwt7mkvq-uc.a.run.app/comparative/
     idleMinutes: 10
 
   vicinity:
@@ -12,7 +12,7 @@ demos:
     instance: vicinity-prod-vm
     zone: us-east1-c
     healthUrl: http://34.74.93.251/
-    appUrl: http://34.74.93.251/
+    appUrl: https://vicinity-proxy-tffwt7mkvq-uc.a.run.app/
     idleMinutes: 10
 
   buffett:
@@ -20,5 +20,5 @@ demos:
     instance: buffett-prod-vm
     zone: us-east1-c
     healthUrl: http://35.231.218.39:8000/health
-    appUrl: http://35.231.218.39:8000/index.html
+    appUrl: https://buffett-proxy-tffwt7mkvq-uc.a.run.app/index.html
     idleMinutes: 10
