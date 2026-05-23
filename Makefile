@@ -160,7 +160,7 @@ deploy: ## Build via Cloud Build and deploy to Cloud Run in one step
 		--allow-unauthenticated \
 		--min-instances=0 --max-instances=1 \
 		--memory=256Mi --cpu=1 --timeout=120 --port=8080 \
-		--set-env-vars="GCP_PROJECT_ID=$(PROJECT),STATE_BUCKET=$(BUCKET),ADMIN_TOKEN=$(ADMIN_TOKEN),DEFAULT_IDLE_MINUTES=10,ALLOWED_ORIGINS=*"
+		--set-env-vars="^@^GCP_PROJECT_ID=$(PROJECT)@STATE_BUCKET=$(BUCKET)@ADMIN_TOKEN=$(ADMIN_TOKEN)@DEFAULT_IDLE_MINUTES=10@ALLOWED_ORIGINS=https://portfolio.anirudhraj694.workers.dev,http://localhost:5173"
 	@echo ""
 	@echo "Deployed $(VERSION) to:"
 	@$(MAKE) -s url
