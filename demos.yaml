@@ -3,15 +3,15 @@ demos:
     name: "Comparative Streamlit Analysis"
     instance: cs5-prod-vm-v2
     zone: us-east1-d
-    healthUrl: http://34.26.144.212:8501/_stcore/health
-    appUrl: https://cs5-proxy-tffwt7mkvq-uc.a.run.app/comparative/
+    healthUrl: http://34.26.144.212:8000/health
+    appUrl: https://cs5-proxy-tffwt7mkvq-uc.a.run.app/
     idleMinutes: 10
 
   vicinity:
     name: "Vicinity"
     instance: vicinity-prod-vm
     zone: us-east1-c
-    healthUrl: http://34.74.93.251/
+    healthUrl: http://34.74.93.251/healthz
     appUrl: https://vicinity-proxy-tffwt7mkvq-uc.a.run.app/
     idleMinutes: 10
 
