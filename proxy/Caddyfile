@@ -7,9 +7,19 @@
     handle /health {
         respond "ok" 200
     }
+    handle /api/* {
+        reverse_proxy http://34.26.144.212:8000 {
+            flush_interval -1
+            transport http {
+                read_timeout 300s
+                dial_timeout 5s
+            }
+        }
+    }
     reverse_proxy {$UPSTREAM} {
+        flush_interval -1
         transport http {
-            read_timeout 60s
+            read_timeout 300s
             dial_timeout 5s
         }
     }

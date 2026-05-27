@@ -4,7 +4,7 @@ demos:
     instance: cs5-prod-vm-v2
     zone: us-east1-d
     healthUrl: http://34.26.144.212:8000/health
-    appUrl: https://cs5-proxy-tffwt7mkvq-uc.a.run.app/
+    appUrl: https://cs5-proxy-tffwt7mkvq-uc.a.run.app/comparative/
     idleMinutes: 10
 
   vicinity:
